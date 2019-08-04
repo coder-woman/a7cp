@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>asiete. Agencia de Publicidad</title>
+    <meta name="description" content="Somos una agencia de comunicación estratégica y de consultoría. Nuestro trabajo es caracterizado por el uso de la metodología de diseño de servicios, centrado en la experiencia de trabajo colaborativo entre cliente y agencia. Formado por un equipo multidisciplinario de líderes con más de 20 años de experiencia en la industria creativa y publicitaria.">
+    <link href="fonts/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            color: white;
+            font-family: 'Metropolis';
+            font-weight: 100;
+        }
+        .app {
+            margin: 0;
+            padding: 40px;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#413ad6+0,413ad6+100 */
+            background:#1e1e23;
+        }
+
+        .logo {
+            /* max-width: 8em; */
+            width: 12em;
+        }
+        .logo img {
+            width: 100%;
+        }
+        h1 {
+            font-size: 4em;
+            font-weight: 100;
+            max-width: 550px;
+            margin: 0;
+            line-height: 0.95em;
+            margin-bottom: 20px;
+        }
+        
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .icon {
+            padding: 0 10px;
+            display: inline-block;
+            height: 13px;
+        }
+                footer {
+            position: absolute;
+            bottom: 40px;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        .content p {
+            font-weight: normal;
+            margin: 0;
+            font-size: 0.85em;
+            line-height: 1.5em;
+            max-width: 550px;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        footer div {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        
+        .content {
+    /* margin-top: 100px; */
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+        .manifesto {
+    font-weight: 100;
+    line-height: 1.2em;
+    text-align: right;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    z-index: 1;
+}
+.aform {
+    background-image: url(./acurve.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    right:0;
+    top: 0;
+    z-index: 0;
+}
+
+@media (max-width:500px) {
+
+    h1 {
+    font-size: 3em;
+    }
+    .aform {
+        height: 90vh;
+    }
+    footer {
+    position: absolute;
+    bottom: 40px;
+    font-size: 0.8em;
+    font-weight: normal;
+    width: calc(100% - 80px);
+    box-sizing: border-box;
+    line-height: 23px;
+    margin-bottom: 25px;
+}
+div:nth-child(2) a:first-child .icon {
+    padding-left: 0px;
+}
+.content {
+            margin-top: 100px;
+            position: relative;
+            top: 0%;
+            transform: translate(0%,0%);
+        }
+
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #ff00b1;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 66px;
+    box-shadow: 0px 7px 10px rgb(0,0,0,0.1);
+    z-index: 100;
+}
+
+
+    </style>
+
+</head>
+<body>
+
+        
+    <a href="https://api.whatsapp.com/send?phone=5219993229134&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <div class="aform"></div>
+
+    <div class="app">
+
+        
+
+        <header>
+            <div class="logo">
+                <img src="./asiete.svg" alt="asiete">
+            </div>
+            <div class="manifesto">
+                Service<br>
+                Design<br>
+                Thinking
+            </div>
+        </header>
+    
+        <article class="content">
+            <h1>
+                a design and marketing studio
+                based in mexico.
+            </h1>
+            <p>
+                    Somos una agencia de comunicación estratégica y de consultoría. Formado por un equipo multidisciplinario de líderes con más de 20 años de experiencia en la industria creativa y publicitaria.
+            </p>
+        </article>
+    
+        <footer>
+            <div>
+                    <a href="mailto:hola@asiete.mx">hola@asiete.mx</a> <img class="icon" src="./whatsapp.svg" alt=""> <a href="tel:529993229134">+52 (999) 322 9134</a>
+            </div>
+            <div>
+                    <a href="#" target="_blank"><img class="icon" src="./facebook.svg" alt=""></a> <a href="#" target="_blank"><img class="icon" src="./instagram.svg" alt=""></a>  @asiete.mx
+            </div>
+            <div>
+                    Calle 19 N.272 por 22 Col. Miguel Alemán. Merida, Yuc. Mex.
+            </div>
+        </footer>
+
+    </div>
+    
+</body>
+</html>
