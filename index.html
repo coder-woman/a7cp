@@ -19,7 +19,7 @@
             margin: 0;
             padding: 40px;
             width: 100vw;
-            height: 100vh;
+            min-height: 100vh;
             box-sizing: border-box;
             /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#413ad6+0,413ad6+100 */
             background:#1e1e23;
@@ -40,7 +40,7 @@
             line-height: 0.95em;
             margin-bottom: 20px;
         }
-        
+
         header {
             width: 100%;
             display: flex;
@@ -51,12 +51,13 @@
             display: inline-block;
             height: 13px;
         }
-                footer {
-            position: absolute;
-            bottom: 40px;
-            font-size: 0.8em;
-            font-weight: normal;
+
+        footer {
+        font-size: 0.8em;
+        font-weight: normal;
+        margin-top: 80px;
         }
+
         .content p {
             font-weight: normal;
             margin: 0;
@@ -64,6 +65,12 @@
             line-height: 1.5em;
             max-width: 550px;
         }
+
+        form > input {
+          display: block;
+
+        }
+
         a {
             color: inherit;
             text-decoration: none;
@@ -73,13 +80,73 @@
             padding: 0 10px;
         }
 
-        
+
         .content {
-    /* margin-top: 100px; */
-    position: absolute;
-    top: 50%;
-    transform: translate(0%,-50%);
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      margin-top: 150px;
+
 }
+
+.content-item {
+    width: 50%;
+    min-width:400px;
+}
+
+.content-item form {
+    width: 350px;
+    padding-left: 20px;
+}
+
+form > input, form > textarea {
+    display: block;
+    width: 100%;
+    padding: 25px;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid #cecece50;
+    font-size: 16px;
+    color: #fff;
+    box-sizing: border-box;
+    outline: none;
+}
+form > input:focus, form > textarea:focus {
+  border-bottom: 1px solid #F01999;
+}
+
+.form-button a {
+  border-radius: 30px;
+background-color: #fff;
+padding: 13px 30px;
+margin-top: 35px;
+display: inline-block;
+color: #000;
+font-size: 12px;
+letter-spacing: 2px;
+font-weight: 600;
+
+}
+
+.brief-button{
+border-radius: 30px;
+background-color: transparent;
+padding: 13px 30px;
+margin-top: 35px;
+display: inline-block;
+color: #fff;
+font-size: 12px;
+letter-spacing: 2px;
+font-weight: 600;
+border: 1px solid #fff;
+
+}
+
+
+.form-button {
+    text-align: right;
+}
+
         .manifesto {
     font-weight: 100;
     line-height: 1.2em;
@@ -101,7 +168,7 @@
     z-index: 0;
 }
 
-@media (max-width:500px) {
+@media (max-width:880px) {
 
     h1 {
     font-size: 3em;
@@ -110,7 +177,6 @@
         height: 90vh;
     }
     footer {
-    position: absolute;
     bottom: 40px;
     font-size: 0.8em;
     font-weight: normal;
@@ -124,10 +190,21 @@ div:nth-child(2) a:first-child .icon {
 }
 .content {
             margin-top: 100px;
-            position: relative;
-            top: 0%;
-            transform: translate(0%,0%);
-        }
+}
+
+.content-item:last-child {
+    margin-top: 70px;
+}
+.content-item {
+    width: 100%;
+    text-align: center;
+}
+.content-item h1, .content-item p  {
+    margin: 30px auto;
+}
+.content-item > form {
+    margin: 0 auto;
+}
 
 }
 
@@ -146,14 +223,22 @@ div:nth-child(2) a:first-child .icon {
     box-shadow: 0px 7px 10px rgb(0,0,0,0.1);
     z-index: 100;
 }
-
+::placeholder {
+    color: rgba(255,255,255,0.7);
+    font-weight: lighter;
+}
+input:-internal-autofill-selected {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-image: none !important;
+    color: rgb(255, 255, 255) !important;
+}
 
     </style>
 
 </head>
 <body>
 
-        
+
     <a href="https://api.whatsapp.com/send?phone=5219993229134&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
@@ -162,7 +247,7 @@ div:nth-child(2) a:first-child .icon {
 
     <div class="app">
 
-        
+
 
         <header>
             <div class="logo">
@@ -174,17 +259,35 @@ div:nth-child(2) a:first-child .icon {
                 Thinking
             </div>
         </header>
-    
+
         <article class="content">
+          <div class="content-item">
             <h1>
-                a design and marketing studio
-                based in merida.
+                a design and marketing studio based in Mexico.
             </h1>
             <p>
                     Somos una agencia de comunicación estratégica y de consultoría. Formado por un equipo multidisciplinario de líderes con más de 20 años de experiencia en la industria creativa y publicitaria.
             </p>
+            <a class="brief-button" href="#">DESCARGAR PRESENTACIÓN</a>
+          </div>
+          <div class="content-item">
+            <form class="" action="index.html" method="post">
+              <input type="text" name="nombre" value="" placeholder="Nombre completo">
+              <input type="email" name="email" value="" placeholder="E-mail">
+              <input type="tel" name="phone" value="" placeholder="Teléfono">
+              <textarea name="message" value="" placeholder="Mensaje"></textarea>
+              <div class="form-button">
+                <a href="#">ENVIAR</a>
+              </div>
+            </form>
+
+
+          </div>
+
+
+
         </article>
-    
+
         <footer>
             <div>
                     <a href="mailto:hola@asiete.mx">hola@asiete.mx</a> <img class="icon" src="./whatsapp.svg" alt=""> <a href="tel:529993229134">+52 (999) 322 9134</a>
@@ -198,6 +301,6 @@ div:nth-child(2) a:first-child .icon {
         </footer>
 
     </div>
-    
+
 </body>
 </html>
