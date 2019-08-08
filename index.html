@@ -22,7 +22,7 @@
             min-height: 100vh;
             box-sizing: border-box;
             /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#413ad6+0,413ad6+100 */
-            background:#1e1e23;
+            background:#000;
         }
 
         .logo {
@@ -110,9 +110,13 @@ form > input, form > textarea {
     color: #fff;
     box-sizing: border-box;
     outline: none;
+    font-family: metropolis;
 }
 form > input:focus, form > textarea:focus {
   border-bottom: 1px solid #F01999;
+}
+form#contact-form {
+    margin: 0 auto;
 }
 
 .form-button a {
@@ -147,11 +151,11 @@ border: 1px solid #fff;
     text-align: right;
 }
 
-        .manifesto {
+.manifesto {
     font-weight: 100;
-    line-height: 1.2em;
+    line-height: 1.1em;
     text-align: right;
-    font-size: 1.1em;
+    font-size: 1em;
     letter-spacing: 0.05em;
     z-index: 1;
 }
@@ -161,7 +165,7 @@ border: 1px solid #fff;
     background-repeat: no-repeat;
     background-position: top right;
     width: 40%;
-    height: 70%;
+    height: 50%;
     position: absolute;
     right:0;
     top: 0;
@@ -170,6 +174,7 @@ border: 1px solid #fff;
 .submit-form {
     cursor: pointer;
 }
+
 
 @media (max-width:880px) {
 
@@ -201,12 +206,29 @@ div:nth-child(2) a:first-child .icon {
 .content-item {
     width: 100%;
     text-align: center;
+    min-width: auto;
 }
 .content-item h1, .content-item p  {
     margin: 30px auto;
 }
 .content-item > form {
     margin: 0 auto;
+}
+.content-item form {
+    width: 100%;
+    padding-left: 0;
+}
+.logo {
+    width: 8em;
+}
+.aform {
+    width: 50%;
+}
+.phone-footer {
+    display: block;
+}
+.phone-footer img.icon {
+    padding-left: 0;
 }
 
 }
@@ -236,19 +258,187 @@ input:-internal-autofill-selected {
     color: rgb(255, 255, 255) !important;
 }
 
+
+
+
+
+.wrapper {
+  background-image: linear-gradient(to right, #3fdfe9, #e400c7, #000, #3a0fda, #3fdfe9);
+  background-size: 600%;
+  background-position: 0 0;
+  box-shadow: inset 0 0 5em rgba(0, 0, 0, .5);
+  height: 100%;
+  /* Animation */
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: gradients;
+}
+
+@keyframes gradients {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 50% 0;
+  }
+  50% {
+    background-position: 90% 0;
+  }
+  60% {
+    background-position: 60%;
+  }
+  75% {
+    background-position: 40%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+.blinky::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: #f01798;
+    border-radius: 50px;
+    transform: scale(1.8);
+    z-index: -100;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out 0s;
+    /* Animation */
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+}
+.blinky::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: #f01798;
+    border-radius: 50px;
+    transform: scale(1.8);
+    z-index: -100;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out 0s;
+    /* Animation */
+    animation-duration: 1.5s;
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
+    animation-name: blink;    
+}
+@keyframes blink {
+    0%   {
+        transform: scale(1);
+        }
+    40% {
+        transform: scale(1.6);
+        opacity: 0.3;
+        }
+    60% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+@keyframes blink2 {
+    0%   {
+        transform: scale(1);
+        }
+    30% {
+        transform: scale(2.3);
+        opacity: 0.3;
+        }
+    50% {
+        transform: scale(2.3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2.3);
+        opacity: 0;
+    }
+}
+
+
+/*
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700,300italic);
+
+$pp-purple: #3a0fda;
+$pp-blue: #3fdfe9;
+$pp-ltblue: #e400c7;
+$sp-yellow: #000000;
+
+html, body {
+  height: 100%;
+}
+.wrapper {
+  align-items: center;
+  background-image: linear-gradient(to right, $pp-blue,$pp-ltblue,$sp-yellow,$pp-purple,$pp-blue);
+  background-size: 600%;
+  background-position: 0 0;
+  box-shadow: inset 0 0 5em rgba(0,0,0,.5);
+  display: flex;
+  font-family: 'Lato', Arial, sans-serif;
+  height: 100%;
+  justify-content: center;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: gradients;
+}
+h1 {
+  color: white;
+  font-size: 2.4em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 830px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@keyframes gradients {
+    0%   {background-position: 0 0;}
+    25% {background-position: 50% 0;}
+    50% {background-position: 90% 0;}
+    60% {background-position: 60%;}
+    75% {background-position: 40%;}
+    100%  {background-position: 0 0;}
+}
+*/
+
+.content-item h2 {
+    max-width: 330px;
+    font-weight: 300;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    /* margin-bottom: 20px; */
+}
     </style>
 
 </head>
 <body>
 
 
-    <a href="https://api.whatsapp.com/send?phone=5219993229134&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=5219993229134&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." class="float blinky" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
 
     <div class="aform"></div>
 
-    <div class="app">
+    <div class="app wrapper">
 
 
 
@@ -274,6 +464,12 @@ input:-internal-autofill-selected {
             <a class="brief-button" href="asiete-dossier.pdf">DESCARGAR PRESENTACIÓN</a>
           </div>
           <div class="content-item">
+
+            <h2>
+                Nos encantaría conocer<br>
+                tu proyecto. 
+                Escríbenos.
+            </h2>
             <form id="contact-form">
               <input type="text" name="f_name" value="" placeholder="Nombre completo">
               <input type="email" name="f_email" value="" placeholder="E-mail">
@@ -293,7 +489,7 @@ input:-internal-autofill-selected {
 
         <footer>
             <div>
-                    <a href="mailto:hola@asiete.mx">hola@asiete.mx</a> <img class="icon" src="./whatsapp.svg" alt=""> <a href="tel:529993229134">+52 (999) 322 9134</a>
+                    <a href="mailto:hola@asiete.mx">hola@asiete.mx</a> <span class="phone-footer"><img class="icon" src="./whatsapp.svg" alt=""> <a href="tel:529993229134">+52 (999) 322 9134</a></span>
             </div>
             <div>
                     <a href="#" target="_blank"><img class="icon" src="./facebook.svg" alt=""></a> <a href="#" target="_blank"><img class="icon" src="./instagram.svg" alt=""></a>  @asiete.mx

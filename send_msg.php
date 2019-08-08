@@ -62,11 +62,11 @@ $time = date('H:i:s');
 							    echo 'El Mensaje no pudo ser enviado.';
 							    echo 'Mailer Error: ' . $mail->ErrorInfo;
 							} else {
-							    echo '<span class="message" style="margin-top: 3em; text-align: center; font-weight: 400;display: block; width: 100%; font-size: 16px;">¡Gracias por escribir!<br>En breve un asesor especializado lo contactará, en breve.</span>';
+							    echo '<span class="message" style="margin-top: 3em;text-align: left;font-weight: 300;display: block;width: 100%;font-size: 16px;line-height: 1.5em;">¡Gracias por escribir!<br>En breve un asesor especializado lo contactará, en breve.</span>';
 							}
 
 					} else {
-						echo '<span class="message" style="margin-top: 3em; text-align: center; font-weight: 400;display: block; width: 100%; font-size: 16px;">Por favor verifique los campos</span>';
+						echo '<span class="message" style="margin-top: 3em;text-align: left;font-weight: 300;display: block;width: 100%;font-size: 16px;line-height: 1.5em;">Por favor verifique los campos</span>';
 					}
 
 	// 	 }
